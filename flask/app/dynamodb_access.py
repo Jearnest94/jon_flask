@@ -1,6 +1,6 @@
 import os
-
 import boto3
+from boto3.dynamodb.conditions import Attr
 
 
 def get_resource():
@@ -12,6 +12,13 @@ def get_resource():
 
 def get_all_readings():
     client = get_resource()
-    table = client.Table('readings')
+    table = client.Table('speed_readings')
     response = table.scan()
+    return response['Items']
+
+
+def get_item_by_attribute(attribute, value):
+    client = get_resource()
+    table = client.Table('speed_readings')
+    response = table.scan(FilterExpression=Attr(attribute).eq(value))
     return response['Items']

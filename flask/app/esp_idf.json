@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "http://dl.espressif.com/dl/schemas/esp_idf",
+  "_comment": "Configuration file for ESP-IDF IDEs.",
+  "_warning": "Use / or \\ when specifying path. Single backslash is not allowed by JSON format.",
+  "gitPath": "/usr/bin/git",
+  "idfToolsPath": "/home/jon/jon_flask/flask/app",
+  "idfSelectedId": "esp-idf-6f2e10242a95b79213fab0be2f01f1bd",
+  "idfInstalled": {
+    "esp-idf-6f2e10242a95b79213fab0be2f01f1bd": {
+      "version": "4.4.0",
+      "python": "/home/jon/jon_flask/flask/app/python_env/idf4.4_py3.8_env/bin/python",
+      "path": "/home/jon/esp/esp-idf"
+    }
+  }
+}

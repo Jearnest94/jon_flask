@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Temp Readings</title>
+    <title>Speed Camera Readings</title>
     <style>
         table {
             width: 80%;
@@ -15,22 +15,24 @@
     </style>
 </head>
 <body>
+<a href="{{ url_for('graph') }}">Graph</a>
+</br>
     <table>
         <tr>
-            <th>Sensor</th>
+            <th>Camera</th>
             <th>Date & Time</th>
-            <th>Temp Reading</th>
+            <th>Speed in Km/h</th>
         </tr>
         {% for reading in readings %}
             <tr>
                 <td>
-                    {{ reading['sensor'] }}
+                    {{ reading['Camera'] }}
                 </td>
                 <td>
                     {{ reading['datetime'] }}
                 </td>
                 <td>
-                    {{ reading['temp'] }}
+                    {{ reading['Speed'] }}
                 </td>
             </tr>
         {% endfor %}
